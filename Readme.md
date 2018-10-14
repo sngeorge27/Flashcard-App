@@ -6,7 +6,7 @@ Presents users with a questions and allows users to tap screen to reveal answer 
 ### App Walk-though
 `TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="http://recordit.co/7PWbvGifyI" width=200><br>
 
 ## Required
 - [X] Create New Project in Xcode
