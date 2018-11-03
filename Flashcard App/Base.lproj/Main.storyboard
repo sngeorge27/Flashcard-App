@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,14 +45,14 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q63-vA-Enc">
-                                <rect key="frame" x="172" y="549" width="30" height="55"/>
+                                <rect key="frame" x="298" y="549" width="30" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ASI-LP-ZZj" kind="show" id="JQs-3J-65u"/>
+                                    <segue destination="ASI-LP-ZZj" kind="show" id="eWm-sd-Q8v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -117,8 +117,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ysw-6Z-2bb"/>
                     <connections>
-                        <outlet property="answerTexr" destination="3wa-4m-GVr" id="1Qq-l5-skh"/>
-                        <outlet property="questionText" destination="CkM-tP-Aub" id="kMM-CT-6QF"/>
+                        <outlet property="answerTextField" destination="3wa-4m-GVr" id="90E-LQ-Fqh"/>
+                        <outlet property="questionTextField" destination="CkM-tP-Aub" id="bOk-sx-qdI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEA-Pz-cgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,6 +137,7 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="dsn-FN-z42" kind="relationship" relationship="rootViewController" id="lgB-0C-Wyf"/>
+                        <segue destination="dsn-FN-z42" kind="show" id="0CY-Rv-mDX"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJw-J3-Y2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,4 +145,7 @@
             <point key="canvasLocation" x="805.60000000000002" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lgB-0C-Wyf"/>
+    </inferredMetricsTieBreakers>
 </document>
