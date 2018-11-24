@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var backLabel: UILabel!
+    @IBOutlet weak var card: UIView!
     
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
@@ -36,6 +37,8 @@ class ViewController: UIViewController {
         updateLabels()
         
         updateNextPrevButtons()
+        
+        animateCardOut()
     }
     
     var currentIndex = 0
@@ -62,7 +65,14 @@ class ViewController: UIViewController {
 
 
     @IBAction func didTapFlascard(_ sender: Any) {
+        flipFlashcard()
+    }
+    
+    func flipFlashcard(){
         frontLabel.isHidden = true
+        UIView.transition(with: card, duration: 0.3, options: UIView.AnimationOptions .transitionFlipFromRight, animations: {
+            self.frontLabel.isHidden = true
+        })
     }
     func updateFlashcard(question: String, answer: String)  {
         let flashcard = Flashcard(question: question, answer: answer)
@@ -136,6 +146,24 @@ class ViewController: UIViewController {
         
         }
     
+    func animateCardOut(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        }, completion: {finished in
+            self.updateLabels()
+            self.animateCardIn()
+        })
+    }
+    
+    func animateCardIn(){
+        
+        card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.card.transform = CGAffineTransform.identity
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
         let navigationController = segue.destination as! UINavigationController
@@ -143,5 +171,7 @@ class ViewController: UIViewController {
         
         creationController.flashcardsController = self
     }
+    
+    
 }
 
